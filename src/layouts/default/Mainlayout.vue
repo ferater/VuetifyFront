@@ -3,10 +3,10 @@
     <header>
       <NavBar />
     </header>
-    <v-main>
       <nav>
         <Drawer />
       </nav>
+    <v-main>
       <router-view />
     </v-main>
   </v-app>

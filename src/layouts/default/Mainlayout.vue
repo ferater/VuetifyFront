@@ -4,9 +4,9 @@
       <NavBar />
     </header>
     <v-main>
-      <aside>
+      <nav>
         <Drawer />
-      </aside>
+      </nav>
       <router-view />
     </v-main>
   </v-app>

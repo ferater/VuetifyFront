@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar elevation="0" >
+  <v-app-bar elevation="0">
     <v-app-bar-nav-icon @click="toggleDrawer" />
     <v-app-bar-title> <p>{{ $t("failed") }}</p> </v-app-bar-title>
     <template v-slot:append>

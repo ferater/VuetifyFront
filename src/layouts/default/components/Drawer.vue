@@ -1,5 +1,10 @@
 <template>
-  <v-navigation-drawer permanent location="left" v-model="appStore.drawerState">
+  <v-navigation-drawer
+    permanent
+    location="left"
+    v-model="appStore.drawerState"
+    order="0"
+  >
     <template v-slot:prepend>
       <v-list-item
         lines="two"
@@ -8,7 +13,6 @@
         subtitle="Logged in"
       ></v-list-item>
     </template>
-
     <v-divider></v-divider>
     <SideNav />
   </v-navigation-drawer>

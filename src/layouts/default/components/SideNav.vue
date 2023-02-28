@@ -8,7 +8,6 @@
         :ripple="false"
         v-if="!link.children && !link.meta.hidden"
       />
-
       <v-list-group :value="link.meta.title" v-if="link.children">
         <template v-slot:activator="{ props }">
           <v-list-item

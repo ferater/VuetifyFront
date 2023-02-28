@@ -11,7 +11,6 @@ const theme = useTheme();
 
 const toggleTheme = () => {
    theme.global.name.value = theme.global.current.value.dark ? "lightTheme" : "darkTheme";
-   console.log(theme.global.current)
    localStorage.setItem('currentTheme', theme.global.name.value);
 };
 

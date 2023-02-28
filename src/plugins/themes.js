@@ -1,7 +1,7 @@
 const lightTheme = {
   dark: false,
   colors: {
-    background: "#ccc",
+    background: "#fff",
     error: "#B00020",
     info: "#2196F3",
     onBackground: "#000",
@@ -29,7 +29,7 @@ const lightTheme = {
 const darkTheme = {
   dark: true,
   colors: {
-    background: "#999",
+    background: "#000",
     error: "#CF6679",
     info: "#2196F3",
     onBackground: "#fff",

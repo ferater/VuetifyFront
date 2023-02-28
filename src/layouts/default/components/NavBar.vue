@@ -3,6 +3,7 @@
     <v-app-bar-nav-icon @click="toggleDrawer" />
     <v-app-bar-title> <p>{{ $t("failed") }}</p> </v-app-bar-title>
     <template v-slot:append>
+      <Changelang/>
       <ChangeTheme/>
     </template>
   </v-app-bar>
@@ -10,6 +11,7 @@
 
 <script setup>
 import ChangeTheme from './ChangeTheme.vue';
+import Changelang from './Changelang.vue';
 import { useAppStore } from '@/store/app';
 const appStore = useAppStore();
 

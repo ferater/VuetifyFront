@@ -5,12 +5,16 @@
     </template>
     <v-list density="compact">
       <v-list-item
+      dense
         class="cursor-pointer"
-        :prepend-avatar="`src/assets/svg/flags/${locale}.svg`"
         v-for="locale in lang.availableLocales"
         :key="`locale-${locale}`"
         @click="changeLocale(locale)"
-      />
+      >
+    <v-avatar size="28">
+      <img :src="`src/assets/svg/flags/${locale}.svg`" :alt="locale">
+    </v-avatar>
+    </v-list-item>
     </v-list>
   </v-menu>
 </template>

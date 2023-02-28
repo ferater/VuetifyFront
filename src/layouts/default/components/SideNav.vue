@@ -1,5 +1,5 @@
 <template>
-  <v-list variant="plain">
+  <v-list variant="plain" density>
     <template v-for="link in links[0].children" :key="link.meta.title">
       <v-list-item
         :prepend-icon="link.meta.icon"

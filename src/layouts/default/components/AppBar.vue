@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar elevation="0" :height="appStore.navBarHeight">
+  <v-app-bar app elevation="0" :height="appStore.navBarHeight">
     <v-app-bar-nav-icon @click="toggleDrawer" />
     <v-app-bar-title>
       <p>{{ $t("failed") }}</p>

@@ -1,5 +1,6 @@
 <template>
   <v-navigation-drawer
+  width="250"
     permanent
     location="left"
     v-model="appStore.drawerState"
@@ -23,3 +24,4 @@ import SideNav from "./SideNav.vue";
 import { useAppStore } from "@/store/app";
 const appStore = useAppStore();
 </script>
+

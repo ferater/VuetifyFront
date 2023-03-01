@@ -23,8 +23,16 @@ const routes = [
         name:'userList',
         meta: {title:"users", icon:"mdi-account-box-multiple-outline"},
         component: ()=> import('@/views/UserList.vue')
-      },
+      }
     ]
+  },
+
+
+  {
+    path: "/:catchAll(.*)*",
+    meta: { hidden: true },
+    component: () => import("@/views/ErrorNotFound.vue"),
+    children:[]
   },
 ];
 

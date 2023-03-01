@@ -1,19 +1,22 @@
 <template>
-  <v-app class="pa-5">
+  <v-app  >
     <header>
-      <NavBar />
+      <AppBar />
     </header>
       <nav>
         <Drawer />
       </nav>
     <v-main>
-      <router-view />
+      <v-container>
+        <router-view />
+      </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script setup>
-import NavBar from "./components/NavBar.vue";
+import AppBar from "./components/AppBar.vue";
 import Drawer from "./components/Drawer.vue";
 //
 </script>
+

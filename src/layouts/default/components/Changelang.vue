@@ -1,7 +1,9 @@
 <template>
   <v-menu>
     <template v-slot:activator="{ props }">
-      <v-btn icon="mdi-translate" v-bind="props"> </v-btn>
+      <v-btn v-bind="props" flat icon size="35" class="mr-2">
+      <v-icon icon="mdi-translate" size="18"/>
+      </v-btn>
     </template>
     <v-list density="compact">
       <v-list-item
@@ -12,7 +14,8 @@
         @click="changeLocale(locale)"
       >
         <v-avatar size="28">
-          <img :src="`src/assets/svg/flags/${locale}.svg`" :alt="locale" />
+          <!-- <v-svg :icon="`@/assets/svg/flags/${locale}.svg`"></v-svg> -->
+          <img :src="`@/assets/svg/flags/${locale}.svg`" :alt="locale" />
         </v-avatar>
       </v-list-item>
     </v-list>

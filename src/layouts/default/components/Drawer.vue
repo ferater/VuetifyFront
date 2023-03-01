@@ -3,7 +3,7 @@
     permanent
     location="left"
     v-model="appStore.drawerState"
-    order="0"
+    :order="appStore.drawerOrder"
   >
     <template v-slot:prepend>
       <v-list-item

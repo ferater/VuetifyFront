@@ -1,6 +1,6 @@
 <template>
-  <v-btn flat icon dense rounded @click="toggleTheme">
-    <v-icon icon="mdi-theme-light-dark" />
+  <v-btn flat icon size="35" @click="toggleTheme">
+    <v-icon icon="mdi-theme-light-dark" size="18"/>
   </v-btn>
 </template>
 

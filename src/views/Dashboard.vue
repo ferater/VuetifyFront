@@ -1,7 +1,5 @@
 <template>
-<h1>{{ $t("dashboard") }}</h1>
+  <h1>{{ $t("dashboard") }}</h1>
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>

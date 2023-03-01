@@ -1,33 +1,36 @@
 <template>
-  <v-list variant="plain" density>
-    <template v-for="link in links[0].children" :key="link.meta.title">
-      <v-list-item
-        :prepend-icon="link.meta.icon"
-        :title="$t(link.meta.title)"
-        :value="link.meta.title"
-        :ripple="false"
-        v-if="!link.children && !link.meta.hidden"
-      />
-      <v-list-group :value="link.meta.title" v-if="link.children">
-        <template v-slot:activator="{ props }">
-          <v-list-item
-            v-bind="props"
-            :prepend-icon="link.meta.icon"
-            :title="$t(link.meta.title)"
-            :ripple="false"
-          ></v-list-item>
-        </template>
-        <template v-for="item in link.children" :key="item.name">
-          <v-list-item
-            :prepend-icon="item.meta.icon"
-            :title="$t(item.meta.title)"
-            :value="item.meta.title"
-            :ripple="false"
-          />
-        </template>
-      </v-list-group>
-    </template>
-  </v-list>
+  <template v-for="link in links" :key="link.name">
+    <v-list>
+      <template v-if="!link.meta.hidden && link.children.length < 2">
+        <v-list-item
+          :to="{ name: link.children[0].name }"
+          :prepend-icon="link.children[0].meta.icon"
+          :title="$t(link.children[0].meta.title)"
+          :ripple="false"
+        />
+      </template>
+      <template v-if="link.children.length > 1 && !link.meta.hidden">
+        <v-list-group :value="$route.matched[0].path == link.path">
+          <template v-slot:activator="{ props }">
+            <v-list-item
+              v-bind="props"
+              :prepend-icon="link.meta.icon"
+              :title="$t(link.meta.title)"
+              :ripple="false"
+            ></v-list-item>
+          </template>
+          <template v-for="item in link.children" :key="item.name">
+            <v-list-item
+              :to="{ name: item.name }"
+              :prepend-icon="item.meta.icon"
+              :title="$t(item.meta.title)"
+              :ripple="false"
+            />
+          </template>
+        </v-list-group>
+      </template>
+    </v-list>
+  </template>
 </template>
 
 <script setup>
@@ -38,5 +41,9 @@ const links = routes;
 <style scoped>
 .v-list {
   --indent-padding: -40px;
+}
+.deneme {
+  background-color: rgb(var(--v-theme-primary));
+  position: relative;
 }
 </style>
